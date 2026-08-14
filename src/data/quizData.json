@@ -1,0 +1,132 @@
+[
+  {
+    "id": "q1",
+    "question": "Which ancient metallurgical technique was used to cast the Harappan 'Dancing Girl' around 2500 BCE?",
+    "options": [
+      "Lost-wax casting (Cire-perdue)",
+      "Sand casting in iron moulds",
+      "Cold-hammered copper repoussé",
+      "Direct stone chisel carving"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Dancing Girl was cast in solid bronze using the lost-wax technique (cire-perdue), where a beeswax model is coated in clay, fired to evacuate the wax, and filled with molten metal.",
+    "artifactId": "dancing-girl"
+  },
+  {
+    "id": "q2",
+    "question": "Which element of the original Sarnath Lion Capital was omitted when designing the official State Emblem of India in 1950?",
+    "options": [
+      "The four roaring Asiatic lions",
+      "The inverted bell-shaped lotus base",
+      "The 24-spoked Dharma Chakra",
+      "The galloping horse and zebu bull"
+    ],
+    "correctIndex": 1,
+    "explanation": "When adapting the 3rd-century BCE Mauryan capital as India's State Emblem, the inverted bell-shaped lotus base was omitted, and the motto 'Satyameva Jayate' was added below the abacus.",
+    "artifactId": "lion-capital"
+  },
+  {
+    "id": "q3",
+    "question": "What is the defining hallmark of the Classical Gupta Buddhist sculptures from the Sarnath workshop?",
+    "options": [
+      "Heavy, realistic Greco-Roman drapery folds",
+      "Diaphanous, crease-less robes that cling smoothly like wet silk",
+      "Gold-leaf leafing applied directly over terracotta",
+      "Multiple arms holding various warrior weapons"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unlike the Gandhara school with its thick pleated drapery, Sarnath Gupta sculptors eliminated heavy folds in favor of a smooth, translucent sanghati robe that emphasizes inner spiritual radiance.",
+    "artifactId": "standing-buddha"
+  },
+  {
+    "id": "q4",
+    "question": "In the Chola bronze Nataraja, what does the hourglass-shaped drum (Damaru) in Shiva's upper right hand symbolize?",
+    "options": [
+      "The dissolution and destruction of matter",
+      "The primordial sound of cosmic creation (Srishti)",
+      "The royal authority of the Chola monarchs",
+      "The concealment of spiritual truth"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Damaru pulsates the primordial sound (Nada Brahma) from which the rhythm of cosmic creation (Srishti) originates.",
+    "artifactId": "nataraja"
+  },
+  {
+    "id": "q5",
+    "question": "Who was the mythological or literary figure portrayed by Raja Ravi Varma in his celebrated 1896 oleograph?",
+    "options": [
+      "Shakuntala waiting for Dushyanta",
+      "Vasantasena from the classical Sanskrit drama 'Mrcchakatika'",
+      "Damayanti receiving the royal swan",
+      "Goddess Saraswati on the lotus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vasantsena portrays the cultured and noble heroine of King Sudraka's Sanskrit play 'Mrcchakatika' (The Little Clay Cart), dressed in a gold-embroidered crimson saree.",
+    "artifactId": "vasantsena"
+  },
+  {
+    "id": "q6",
+    "question": "Why is 'Princes of the House of Timur' (c. 1550–1555) uniquely important in Mughal art history?",
+    "options": [
+      "It is the only surviving painting signed by Emperor Akbar himself",
+      "It is the earliest large-scale Mughal painting on cotton, featuring generations of Timurid and Mughal rulers",
+      "It was painted entirely by British East India Company draftsmen",
+      "It depicts the naval conquest of the Indian Ocean"
+    ],
+    "correctIndex": 1,
+    "explanation": "Measuring over 1 square meter on fine cotton, it is the earliest monumental Mughal painting, commissioned by Humayun and updated by later emperors to prove dynastic lineage.",
+    "artifactId": "princes-timur"
+  },
+  {
+    "id": "q7",
+    "question": "Which European modernist master significantly influenced Amrita Sher-Gil's use of bold, flat color planes and simplified monumental forms?",
+    "options": [
+      "Paul Gauguin",
+      "Salvador Dalí",
+      "Claude Monet",
+      "Rembrandt van Rijn"
+    ],
+    "correctIndex": 0,
+    "explanation": "Amrita Sher-Gil absorbed the bold, unmixed color planes and sculptural simplification of Post-Impressionist Paul Gauguin, synthesizing it with Ajanta cave murals.",
+    "artifactId": "group-three-girls"
+  },
+  {
+    "id": "q8",
+    "question": "In the 1780 portrait of Raja Pratap Singh of Jaipur, what dual qualities of Rajput kingship are represented by the lotus bud and the curved sword?",
+    "options": [
+      "Wealth as a merchant and diplomacy as an ambassador",
+      "Vaishnavite spiritual devotion (Bhakti) and Kshatriya warrior chivalry",
+      "Astrological scholarship and architectural design",
+      "Ascetic renunciation and imperial conquest"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pink lotus bud signifies his devotion as a Krishna-bhakt poet, while the bejeweled talwar sword underscores his royal duty as a valiant Rajput warrior king.",
+    "artifactId": "raja-pratap-singh"
+  },
+  {
+    "id": "q9",
+    "question": "How did the establishment of the Ravi Varma Fine Arts Lithographic Press in 1894 revolutionize Indian visual culture?",
+    "options": [
+      "It banned all traditional hand-painted miniatures across India",
+      "It allowed high-quality sacred and literary art to be mass-produced and affordable for everyday Indian households",
+      "It introduced black-and-white photography to royal courts",
+      "It replaced stone temple carving with cast-iron statues"
+    ],
+    "correctIndex": 1,
+    "explanation": "By using German chromolithography steam presses, Ravi Varma democratized sacred and mythological art, making multi-color prints available to ordinary homes across India.",
+    "artifactId": "vasantsena"
+  },
+  {
+    "id": "q10",
+    "question": "Under whose feet is the dwarf of ignorance (Apasmara Purusha) crushed in the cosmic dance of Nataraja?",
+    "options": [
+      "Dancing Girl of Mohenjo-daro",
+      "Goddess Parvati",
+      "Lord Shiva (Nataraja)",
+      "Emperor Ashoka the Great"
+    ],
+    "correctIndex": 2,
+    "explanation": "Shiva dances upon the back of Apasmara, symbolizing the triumph of supreme cosmic wisdom and liberation over human ego, forgetfulness, and ignorance.",
+    "artifactId": "nataraja"
+  }
+]

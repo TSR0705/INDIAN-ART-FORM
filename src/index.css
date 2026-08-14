@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --gold: #c5a059;
+  --gold-light: #e6c887;
+  --bronze: #b87333;
+  --terracotta: #c85a32;
+  --charcoal: #090a0f;
+  --charcoal-light: #12141e;
+  --card-bg: rgba(18, 20, 30, 0.85);
+  --border-gold: rgba(197, 160, 89, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #07080c;
+  color: #f3f4f6;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(197, 160, 89, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 40%, rgba(184, 115, 51, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(139, 38, 62, 0.05) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Garamond, serif;
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fce0ad 0%, #dfb76c 40%, #c5a059 70%, #947132 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.silver-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Card */
+.museum-card {
+  background: rgba(15, 17, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(197, 160, 89, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.museum-card:hover {
+  border-color: rgba(197, 160, 89, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 30px -5px rgba(197, 160, 89, 0.25);
+}
+
+/* Golden Glow Effects */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(197, 160, 89, 0.35);
+}
+
+.bronze-glow {
+  box-shadow: 0 0 25px rgba(184, 115, 51, 0.35);
+}
+
+/* Smooth Horizontal Scroll Container */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252836;
+  border-radius: 3px;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(197,160,89,0.15) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Pulse Beacon */
+@keyframes beacon {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 14px rgba(197, 160, 89, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+}
+
+.beacon-pulse {
+  animation: beacon 2s infinite;
+}

@@ -1,0 +1,938 @@
+[
+  {
+    "id": "dancing-girl",
+    "title": "Dancing Girl",
+    "year": -2500,
+    "displayDate": "c. 2500 BCE",
+    "era": "Ancient",
+    "eraTheme": "earth-bronze",
+    "period": "Harappan / Indus Valley Civilization",
+    "civilization": "Indus Valley Civilization",
+    "dynasty": "Mature Harappan Phase (Urban Bronze Age)",
+    "artist": "Master Harappan Sculptor (Anonymous)",
+    "medium": "Bronze",
+    "technique": "Lost-wax casting (Cire-perdue)",
+    "origin": "Mohenjo-daro (present-day Sindh, Pakistan)",
+    "currentLocation": "National Museum, New Delhi, India",
+    "accession": "Hr-5271/195 (National Museum, New Delhi)",
+    "dimensions": "10.5 × 5.0 × 2.5 cm (4.1 × 2.0 × 1.0 in)",
+    "image": "/images/artifacts/dancing-girl.jpg",
+    "modelType": "3d-sculpture",
+    "audioNarration": "Cast over four millennia ago in Mohenjo-daro, the Dancing Girl is one of the world's earliest known bronze figurative sculptures. Standing barely ten centimeters high, she exudes extraordinary confidence and rhythmic naturalism through her relaxed contrapposto stance, hand on hip, and arm loaded with bangles.",
+    "overview": "The Dancing Girl is a prehistoric bronze statuette created around 2500 BCE in the Indus Valley metropolis of Mohenjo-daro. Despite its miniature scale of just 10.5 centimeters, it is globally celebrated as a masterwork of early metallurgy and human artistic representation, showcasing an audacious sense of naturalism, movement, and individual personality.",
+    "historicalContext": "The Indus Valley Civilization (c. 3300–1300 BCE) was one of the three earliest urban cradles of human civilization, renowned for its advanced civil engineering, standardized brick architecture, and extensive maritime trade networks. The discovery of this sophisticated bronze cast in the HR area of Mohenjo-daro in 1926 by archaeologist Ernest J. H. Mackay revolutionized our understanding of prehistoric South Asian metallurgy, proving that Bronze Age Indian artisans had fully mastered complex lost-wax casting long before classical antiquity.",
+    "artisticSignificance": "Unlike the rigid, schematic human figures common to many contemporary Bronze Age cultures, the Dancing Girl displays a strikingly modern, relaxed posture (a proto-tribhanga stance). Her elongated limbs, jaunty tilt of the head, and defiant resting of the right fist upon her hip communicate vivacity and social agency. The detailed adornment—25 bangles on the left arm and four on the right, along with a cowrie-shell necklace—provides invaluable ethnographic evidence of Harappan personal aesthetics.",
+    "culturalMeaning": "Archaeologists and art historians interpret the figure as either a ritual dancer, a woman of high social standing, or a representation of youth and performance in Bronze Age urban society. Her casual yet authoritative posture reflects a society where secular and expressive human forms were celebrated alongside formal civic life.",
+    "influenceOnLaterArt": "The lost-wax casting technique (madhuchishtavidhana) pioneered here was codified thousands of years later in the Shilpa Shastras and formed the direct technological foundation for the celebrated Chola bronzes of medieval South India and the continuing Dhokra metalcraft traditions of tribal India today.",
+    "visualCharacteristics": [
+      "Dynamic contrapposto stance with right arm resting on hip and left arm hanging forward.",
+      "Left arm heavily adorned with 24–25 bangles extending almost to the shoulder.",
+      "Stylized coiled chignon hairstyle gathered elegantly behind the head.",
+      "Triple-pendant cowrie shell necklace resting high on the collarbone.",
+      "Elongated, slender limbs reflecting kinetic energy and naturalistic body modelling."
+    ],
+    "hotspots": [
+      {
+        "id": "bangles",
+        "title": "Adorned Left Arm (Bangles)",
+        "x": 58,
+        "y": 42,
+        "detail": "The left arm is laden with nearly two dozen bangles made of shell or metal, reaching all the way to the shoulder—a traditional adornment style still visible in regional folk cultures of Gujarat and Rajasthan."
+      },
+      {
+        "id": "posture",
+        "title": "Defiant Hand on Hip",
+        "x": 38,
+        "y": 48,
+        "detail": "The right hand placed firmly on the hip creates a relaxed, self-assured stance with slightly bent knees, conveying dynamic movement and individual personality."
+      },
+      {
+        "id": "necklace",
+        "title": "Cowrie Shell Necklace",
+        "x": 50,
+        "y": 28,
+        "detail": "A small necklace with three pendant beads hangs around her neck, evidencing trade in marine shells and sophisticated personal ornamentation in Harappan cities."
+      },
+      {
+        "id": "hair",
+        "title": "Elaborate Hair Chignon",
+        "x": 56,
+        "y": 14,
+        "detail": "Her thick hair is styled into an elaborate coiled bun resting on the back of the right shoulder, showing high aesthetic refinement in personal grooming."
+      },
+      {
+        "id": "metallurgy",
+        "title": "Lost-Wax Bronze Casting",
+        "x": 48,
+        "y": 75,
+        "detail": "Cast in solid bronze using the cire-perdue technique, this artifact proves that Harappan metallurgists had mastered high-temperature alloying of copper and tin."
+      }
+    ],
+    "interactiveModule": {
+      "type": "lost-wax-casting",
+      "title": "Lost-Wax Casting Simulator (Cire-Perdue)",
+      "steps": [
+        {
+          "step": 1,
+          "name": "Wax Sculpting",
+          "desc": "The artist carves a detailed solid model of the figure out of beeswax mixed with tree resins."
+        },
+        {
+          "step": 2,
+          "name": "Clay Coating",
+          "desc": "The wax model is coated with successive layers of fine clay slurry and baked earth to create a thick, heat-resistant mould."
+        },
+        {
+          "step": 3,
+          "name": "De-waxing (Heating)",
+          "desc": "The mould is fired in a kiln. The wax melts and drains out through channels, leaving a hollow cavity bearing the exact negative imprint."
+        },
+        {
+          "step": 4,
+          "name": "Molten Bronze Pouring",
+          "desc": "Molten bronze (an alloy of copper and tin heated above 950°C) is poured into the pre-heated mould cavity."
+        },
+        {
+          "step": 5,
+          "name": "Cooling & Mould Breakage",
+          "desc": "Once cooled, the clay outer mould is carefully chipped away to reveal the raw bronze casting."
+        },
+        {
+          "step": 6,
+          "name": "Chasing & Polishing",
+          "desc": "The artisan chisels away vents, polishes the surface, and engraves fine details on the hair and jewelry."
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "National Museum, New Delhi",
+      "url": "https://museumsofindia.gov.in/repository/record/nat_del-Hr-5271-195-4856",
+      "license": "Public Domain / Open Access Educational Citation",
+      "credit": "National Museum, New Delhi / Archaeological Survey of India"
+    },
+    "coordinates": {
+      "lat": 27.3297,
+      "lng": 68.1389,
+      "locationName": "Mohenjo-daro, Sindh"
+    },
+    "comparisonMetrics": {
+      "scale": "Miniature (10.5 cm)",
+      "subjectType": "Secular / Human Figurative",
+      "patronage": "Urban Citizen / Guild",
+      "aestheticFocus": "Kinetic Movement & Realism"
+    }
+  },
+  {
+    "id": "lion-capital",
+    "title": "Lion Capital of Ashoka",
+    "year": -250,
+    "displayDate": "c. 250 BCE",
+    "era": "Ancient",
+    "eraTheme": "stone-sandstone",
+    "period": "Mauryan Empire",
+    "civilization": "Classical Mauryan India",
+    "dynasty": "Mauryan Dynasty (Reign of Emperor Ashoka)",
+    "artist": "Imperial Mauryan Sculptors Guild",
+    "medium": "Polished Chunar Sandstone",
+    "technique": "Monolithic carving with high-lustre Mauryan mirror polish",
+    "origin": "Sarnath, Uttar Pradesh, India",
+    "currentLocation": "Sarnath Archaeological Museum, Uttar Pradesh, India",
+    "accession": "Acc. No. 5458 (Sarnath Archaeological Museum)",
+    "dimensions": "210 cm height × 130 cm width (approx. 7 ft tall)",
+    "image": "/images/artifacts/lion-capital.jpg",
+    "modelType": "3d-sculpture",
+    "audioNarration": "Erected by Emperor Ashoka at the sacred deer park in Sarnath, the Lion Capital represents the height of Mauryan imperial art. Featuring four monumental lions roaring the message of Dharma to the four corners of the earth, it was adopted in 1950 as the official State Emblem of independent India.",
+    "overview": "Carved from a single massive block of buff-colored Chunar sandstone around 250 BCE, the Lion Capital of Ashoka originally crowned the 15-meter Ashoka Pillar at Sarnath, where Siddhartha Gautama Buddha gave his first sermon. It combines supreme sculptural power, radiant mirror polish, Buddhist philosophical allegory, and sovereign imperial authority.",
+    "historicalContext": "Following the devastating Kalinga War (c. 261 BCE), Emperor Ashoka the Great embraced Buddhism and adopted the policy of Dhamma Vijaya (Conquest by Righteousness). He erected monumental edict pillars across the Indian subcontinent to propagate moral governance and religious tolerance. The Sarnath pillar was erected at the site of the Dharmachakra Pravartana (Turning of the Wheel of Law).",
+    "artisticSignificance": "The capital showcases the legendary 'Mauryan polish'—a glassy, mirror-like finish that has withstood more than two millennia of weathering. The carving achieves a magnificent balance between naturalistic muscular vitality in the lions and stylized heraldic geometry in their manes. The circular abacus beneath features high-relief carvings of four symbolic guardian animals separated by 24-spoked Dharma Wheels.",
+    "culturalMeaning": "The four roaring Asiatic lions face the cardinal directions, symbolizing the universal proclamation of truth and imperial sovereignty. The abacus animals represent the four quarters of the universe or key episodes of the Buddha's life: the Elephant (Queen Maya's conception dream), the Horse (the Great Renunciation/Kanthaka), the Bull (the Buddha's zodiac sign/Taurus), and the Lion (the Sakyasimha).",
+    "influenceOnLaterArt": "On 26 January 1950, independent India officially adopted the Lion Capital as the State Emblem of India. The 24-spoked Ashoka Chakra from the abacus was placed at the center of the National Flag of India, anchoring ancient ethical governance to modern democratic identity.",
+    "visualCharacteristics": [
+      "Four majestic lions seated back-to-back with open jaws showing teeth and tongues.",
+      "Glassy, reflective 'Mauryan polish' achieved through specialized Chunar sandstone finishing.",
+      "Circular drum (abacus) carved with four 24-spoked Dharma Chakras.",
+      "Four dynamic relief animals on the frieze: an elephant, a galloping horse, a zebu bull, and a lion.",
+      "Inverted bell-shaped lotus base with stylized falling petals providing monumental support."
+    ],
+    "hotspots": [
+      {
+        "id": "lions",
+        "title": "Four Roaring Asiatic Lions",
+        "x": 50,
+        "y": 22,
+        "detail": "Four guardian lions symbolize the Buddha as 'Sakyamuni' (the Lion of the Sakya clan) and the universal proclamation of Dhamma across the four cardinal directions."
+      },
+      {
+        "id": "chakra",
+        "title": "The Ashoka Dharma Chakra",
+        "x": 50,
+        "y": 55,
+        "detail": "The 24-spoked wheel represents the law of cause and effect, the Buddhist Eightfold Path, and the 24 hours of righteous living. It is now the central emblem of India's national flag."
+      },
+      {
+        "id": "bull",
+        "title": "Zebu Bull in High Relief",
+        "x": 32,
+        "y": 58,
+        "detail": "Carved with anatomical precision showing muscular tension and hump, symbolizing steadfastness and the zodiac sign under which Gautama was born."
+      },
+      {
+        "id": "horse",
+        "title": "Galloping Horse (Kanthaka)",
+        "x": 68,
+        "y": 58,
+        "detail": "Depicted in mid-stride, representing Siddhartha Gautama's departure from princely life toward supreme enlightenment and spiritual liberation."
+      },
+      {
+        "id": "lotus-base",
+        "title": "Inverted Lotus Base",
+        "x": 50,
+        "y": 85,
+        "detail": "The bell-shaped lotus symbolizes spiritual purity rising untainted from muddy worldly waters. In the modern State Emblem of India, this bottom lotus was omitted."
+      }
+    ],
+    "interactiveModule": {
+      "type": "state-emblem-compare",
+      "title": "Ancient Capital vs Modern State Emblem",
+      "comparisons": [
+        {
+          "element": "Number of Lions Visible",
+          "original": "4 lions (full 360-degree round sculpture)",
+          "emblem": "3 lions visible in 2D profile (4th hidden from view behind)"
+        },
+        {
+          "element": "Inverted Lotus Base",
+          "original": "Features a full bell-shaped lotus base",
+          "emblem": "Omitted in 1950 to create a clean heraldic foundation"
+        },
+        {
+          "element": "National Motto",
+          "original": "No inscription on the capital drum itself",
+          "emblem": "Inscribed with 'सत्यमेव जयते' (Satyameva Jayate — Truth Alone Triumphs) in Devanagari script from the Mundaka Upanishad"
+        },
+        {
+          "element": "Symbolic Function",
+          "original": "Buddhist imperial edict pillar marking Buddha's First Sermon",
+          "emblem": "Official seal of the Republic of India on passports, currency, and constitution"
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "Sarnath Archaeological Museum",
+      "url": "https://upload.indiacode.nic.in/schedulefile?aid=AC_CEN_5_5_00052_200550_1517807327011&rid=277",
+      "license": "State Emblem & Archaeological Heritage / Public Domain",
+      "credit": "Archaeological Survey of India / Sarnath Museum"
+    },
+    "coordinates": {
+      "lat": 25.3811,
+      "lng": 83.0214,
+      "locationName": "Sarnath, Varanasi, Uttar Pradesh"
+    },
+    "comparisonMetrics": {
+      "scale": "Monumental (210 cm)",
+      "subjectType": "Imperial / Buddhist Sovereign Iconography",
+      "patronage": "Emperor Ashoka (Royal State Patronage)",
+      "aestheticFocus": "Lustrous Mirror Polish & Monumental Majesty"
+    }
+  },
+  {
+    "id": "standing-buddha",
+    "title": "Standing Buddha from Sarnath",
+    "year": 474,
+    "displayDate": "c. 5th century CE",
+    "era": "Classical",
+    "eraTheme": "ivory-gold",
+    "period": "Gupta Period (Classical Age)",
+    "civilization": "Classical Gupta Empire",
+    "dynasty": "Gupta Dynasty (Reign of Kumaragupta II / Budhagupta)",
+    "artist": "Master Sculptors of the Sarnath Workshop",
+    "medium": "Chunar Sandstone",
+    "technique": "Subtractive stone relief carving with smooth planar modelling",
+    "origin": "Sarnath, Uttar Pradesh, India",
+    "currentLocation": "Indian Museum, Kolkata / Sarnath Museum Collection",
+    "accession": "S-14 / 10408 (Indian Museum, Kolkata)",
+    "dimensions": "127 × 52 × 22 cm (50.0 × 20.5 × 8.6 in)",
+    "image": "/images/artifacts/standing-buddha.jpg",
+    "modelType": "3d-sculpture",
+    "audioNarration": "Created during the golden age of the Gupta Empire, the Standing Buddha from Sarnath represents the pinnacle of classical Indian aesthetic balance. Stripping away heavy drapery folds in favor of a translucent, clinging robe, the sculpture captures sublime spiritual tranquility through flawless geometric proportion.",
+    "overview": "The 5th-century Standing Buddha of Sarnath is universally hailed as the definitive masterpiece of the Gupta Classical aesthetic. Standing with graceful equanimity, the image embodies the Buddhist ideal of spiritual perfection, inner contemplation, and supreme compassion through smooth, idealized anatomical curves.",
+    "historicalContext": "The Gupta period (c. 320–550 CE) is often termed the 'Golden Age' of ancient India, a time of tremendous artistic, mathematical, literary, and philosophical synthesis. Sarnath in Uttar Pradesh emerged alongside Mathura as the supreme epicenter of Buddhist stone carving. Sculptors at Sarnath developed a distinct school that abandoned the heavy, pleated Greco-Buddhist drapery of Gandhara in favor of diaphanous, uncreased garments that emphasize the luminous spiritual form beneath.",
+    "artisticSignificance": "The hallmark of Sarnath Gupta art is its elimination of surface distraction: the monastic sanghati robe is rendered entirely smooth and transparent, revealing the subtle modelling of the torso like wet silk clinging to the body. The facial expression combines half-closed lotus-petal eyes turned inward in deep meditation (dhyana) with the hand raised in the Abhaya Mudra (gesture of fearlessness and protection).",
+    "culturalMeaning": "The sculpture visualizes the 32 major marks (lakshanas) of an enlightened being: the cranial protuberance of supreme wisdom (ushnisha), the auspicious curl of hair between the brows (urna), snail-shell ringlets of hair turned to the right, webbed fingers, and elongated earlobes recalling his renunciation of royal jewelry.",
+    "influenceOnLaterArt": "The Gupta Sarnath aesthetic became the international canon for Buddhist iconography across Asia, directly shaping the art of Dvaravati Thailand, Borobudur in Java, Angkor in Cambodia, and the Tang Dynasty sculptures of China.",
+    "visualCharacteristics": [
+      "Serene oval face with lowered lotus-petal eyelids reflecting inner spiritual bliss.",
+      "Abhaya Mudra (right hand raised palm outward offering protection and fearlessness).",
+      "Crease-less, diaphanous monastic robe (sanghati) revealing idealized physical anatomy.",
+      "Tightly coiled hair ringlets (dakshinavarta) spiraling clockwise toward the ushnisha crown.",
+      "Ornate circular halo (prabhavali) carved behind the head signifying radiant spiritual aura."
+    ],
+    "hotspots": [
+      {
+        "id": "abhaya",
+        "title": "Abhaya Mudra (Hand of Fearlessness)",
+        "x": 38,
+        "y": 42,
+        "detail": "The raised right palm offers reassurance, peace, and protection from all fear (Abhaya) to all living beings."
+      },
+      {
+        "id": "eyes",
+        "title": "Meditative Inward Gaze",
+        "x": 50,
+        "y": 19,
+        "detail": "The eyes are shaped like lotus petals and cast downward in dhyana, capturing a state of profound inner contemplation rather than external worldly sight."
+      },
+      {
+        "id": "ushnisha",
+        "title": "Ushnisha & Curled Hair",
+        "x": 50,
+        "y": 11,
+        "detail": "The cranial protuberance symbolizes transcendent cosmic wisdom, covered with tight clockwise snail-curls of hair representing spiritual discipline."
+      },
+      {
+        "id": "robe",
+        "title": "Transparent Diaphanous Robe",
+        "x": 50,
+        "y": 55,
+        "detail": "The Sarnath hallmark: a smooth, crease-less sanghati robe that clings like a sheer veil to the body, emphasizing spiritual luminescence over material cloth."
+      },
+      {
+        "id": "halo",
+        "title": "Carved Prabhavali (Halo)",
+        "x": 68,
+        "y": 18,
+        "detail": "A radiating disc carved with concentric floral and geometric bands symbolizing the aura of divine knowledge radiating from the Buddha."
+      }
+    ],
+    "interactiveModule": {
+      "type": "read-the-sculpture",
+      "title": "Read the Sculpture: Gupta Sacred Anatomy",
+      "elements": [
+        {
+          "name": "Face & Expression",
+          "trait": "Smooth oval contours like an egg",
+          "meaning": "Transcendent tranquility and detachment from earthly suffering"
+        },
+        {
+          "name": "Eyes",
+          "trait": "Downcast lotus-petal shape (Padmapalash)",
+          "meaning": "Self-absorbed spiritual consciousness looking within"
+        },
+        {
+          "name": "Torso",
+          "trait": "Prana-filled breath like a lion's chest (Simha-kaya)",
+          "meaning": "Inner yogic vitality and spiritual fullness"
+        },
+        {
+          "name": "Arms",
+          "trait": "Smooth like elephant trunks",
+          "meaning": "Graceful strength and divine protection"
+        },
+        {
+          "name": "Earlobes",
+          "trait": "Elongated and pierced but empty",
+          "meaning": "Renunciation of heavy royal gold earrings for ascetic truth"
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "Indian Museum, Kolkata",
+      "url": "https://museumsofindia.gov.in/repository/record/im_kol-S-14-10408",
+      "license": "Public Domain / Open Access Educational Citation",
+      "credit": "Indian Museum, Kolkata / Archaeological Survey of India"
+    },
+    "coordinates": {
+      "lat": 25.3811,
+      "lng": 83.0214,
+      "locationName": "Sarnath, Uttar Pradesh"
+    },
+    "comparisonMetrics": {
+      "scale": "Life-sized (127 cm)",
+      "subjectType": "Divine / Spiritual Classical Ideal",
+      "patronage": "Buddhist Sangha & Imperial Guilds",
+      "aestheticFocus": "Inner Spiritual Equanimity & Transparent Smoothness"
+    }
+  },
+  {
+    "id": "nataraja",
+    "title": "Nataraja: Shiva as Lord of Dance",
+    "year": 980,
+    "displayDate": "c. 10th century CE",
+    "era": "Medieval",
+    "eraTheme": "bronze-deep-red",
+    "period": "Chola Dynasty",
+    "civilization": "Medieval South Indian Chola Empire",
+    "dynasty": "Imperial Cholas (Reign of Queen Sembiyan Mahadevi / Rajaraja I)",
+    "artist": "Master Chola Sthapati Guild of Thanjavur/Tiruvarangulam",
+    "medium": "Cast Bronze (Panchaloha alloy)",
+    "technique": "Solid lost-wax casting (Madhuchishtavidhana) with fine chiseling",
+    "origin": "Tiruvarangulam, Pudukkottai District, Tamil Nadu, India",
+    "currentLocation": "National Museum, New Delhi (and The Met Collection)",
+    "accession": "NM-56.108 (National Museum, New Delhi) / 1987.142 (Met)",
+    "dimensions": "72.5 × 46.2 × 20.5 cm (28.5 × 18.2 × 8.1 in)",
+    "image": "/images/artifacts/nataraja.jpg",
+    "modelType": "3d-sculpture",
+    "audioNarration": "Cast in radiant bronze during the height of the Chola Dynasty, the Nataraja is celebrated as one of humanity's supreme visual metaphors for the cosmos. Dancing within a ring of cosmic flames, Shiva performs the Ananda Tandava—the dance of bliss that simultaneously creates, sustains, and dissolves the universe.",
+    "overview": "The Chola bronze Nataraja is arguably the most famous and philosophically profound sculptural icon in Indian art. Standing poised within a flaming aureole, Shiva performs the cosmic dance of bliss (Ananda Tandava), balancing the dynamic energy of creation and destruction with majestic stillness.",
+    "historicalContext": "Under the patronage of the Chola dynasty (c. 9th–13th centuries CE), South India experienced an unparalleled golden age of temple architecture and bronze casting. Queen Sembiyan Mahadevi and Emperor Rajaraja I commissioned exquisite mobile deities (Utsava Murti) intended for public temple processions, where the bronze images were dressed in silks, adorned with jewels, and carried through town streets amid ecstatic music.",
+    "artisticSignificance": "The sculpture is a triumph of rhythmic geometry and kinetic balance: four arms radiate outward to create a harmonious circle, the flying matted locks (jata) spread horizontally carrying the river goddess Ganga, while the single raised left leg crosses the body in the gajahasta posture, creating an indelible sense of eternal cosmic rotation.",
+    "culturalMeaning": "The icon encapsulates the Panchakritya—the five cosmic acts of God: Srishti (Creation, symbolized by the Damaru drum), Sthiti (Preservation, by the Abhaya hand), Samhara (Destruction, by the Agni flame), Tirobhava (Illusion, by crushing the dwarf Apasmara), and Anugraha (Grace/Salvation, by the lifted foot pointed to by the diagonal hand).",
+    "influenceOnLaterArt": "Philosophers, scientists, and artists worldwide—from Auguste Rodin to physicist Fritjof Capra—have marveled at the Nataraja. A permanent monumental statue of the Nataraja stands outside the CERN particle physics laboratory in Geneva, symbolizing the cosmic dance of subatomic particles.",
+    "visualCharacteristics": [
+      "Four arms arranged in perfect radial balance inside a circular ring of fire (Prabhamandala).",
+      "Upper right hand holding the hourglass drum (Damaru) pulsating the rhythm of creation.",
+      "Upper left hand cradling the fire of transformation and destruction (Agni).",
+      "Lower right hand held in the Abhaya Mudra offering protection, entwined by a sacred snake.",
+      "Right foot crushing the demon Apasmara Purusha (representing cosmic ignorance and ego)."
+    ],
+    "hotspots": [
+      {
+        "id": "damaru",
+        "title": "Damaru (Drum of Creation)",
+        "x": 68,
+        "y": 28,
+        "detail": "The hourglass-shaped drum produces the primordial sound (Nada Brahma) from which all cosmic creation, language, and matter emerge."
+      },
+      {
+        "id": "agni",
+        "title": "Agni (Flame of Dissolution)",
+        "x": 30,
+        "y": 28,
+        "detail": "The flame resting on Shiva's palm symbolizes the cyclical destruction and purification of the cosmos, clearing the old to make way for new rebirth."
+      },
+      {
+        "id": "abhaya-hand",
+        "title": "Abhaya Mudra (Hand of Protection)",
+        "x": 58,
+        "y": 38,
+        "detail": "The lower right hand assures the devotee of divine refuge and protection amidst the churning chaos of the cosmos."
+      },
+      {
+        "id": "raised-foot",
+        "title": "Lifted Left Foot (Grace & Liberation)",
+        "x": 42,
+        "y": 70,
+        "detail": "The gracefully raised left foot represents spiritual liberation (Moksha) and divine grace, pointed to by the drooping hand like an elephant's trunk."
+      },
+      {
+        "id": "apasmara",
+        "title": "Apasmara (Dwarf of Ignorance)",
+        "x": 50,
+        "y": 86,
+        "detail": "Shiva dances upon the back of the dwarf Apasmara, who represents spiritual forgetfulness, ego, and ignorance crushed under divine wisdom."
+      },
+      {
+        "id": "halo-flames",
+        "title": "Prabhamandala (Aureole of Cosmic Fire)",
+        "x": 50,
+        "y": 10,
+        "detail": "The circular arch of fire represents the manifest cosmos and the endless cycle of time (Samsara) within which the dance occurs."
+      }
+    ],
+    "interactiveModule": {
+      "type": "nataraja-cosmic-wheel",
+      "title": "The Cosmic Dance Wheel (Panchakritya)",
+      "symbols": [
+        {
+          "act": "Srishti (Creation)",
+          "symbol": "Damaru Drum",
+          "desc": "The primordial heartbeat of existence vibrating sound across space."
+        },
+        {
+          "act": "Sthiti (Preservation)",
+          "symbol": "Abhaya Mudra",
+          "desc": "Divine sustenance assuring safety and moral order."
+        },
+        {
+          "act": "Samhara (Destruction)",
+          "symbol": "Flame of Agni",
+          "desc": "The transformative fire that consumes time and worldly decay."
+        },
+        {
+          "act": "Tirobhava (Veiling/Illusion)",
+          "symbol": "Crushed Apasmara",
+          "desc": "The concealment of divine truth behind the veil of Maya."
+        },
+        {
+          "act": "Anugraha (Liberation/Grace)",
+          "symbol": "Raised Foot & Gajahasta Hand",
+          "desc": "The ultimate release of the human soul into blissful enlightenment."
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "National Museum, New Delhi & Met Museum",
+      "url": "https://www.metmuseum.org/art/collection/search/39328",
+      "license": "Met Open Access / CC0 Public Domain",
+      "credit": "The Metropolitan Museum of Art / National Museum, New Delhi"
+    },
+    "coordinates": {
+      "lat": 10.3547,
+      "lng": 78.8956,
+      "locationName": "Tiruvarangulam, Pudukkottai, Tamil Nadu"
+    },
+    "comparisonMetrics": {
+      "scale": "Processional Bronze (72.5 cm)",
+      "subjectType": "Cosmic Divine Iconography (Hindu)",
+      "patronage": "Chola Royal Court & Shaivite Temples",
+      "aestheticFocus": "Kinetic Cosmic Dynamic Rhythm & Mathematical Equilibrium"
+    }
+  },
+  {
+    "id": "princes-timur",
+    "title": "Princes of the House of Timur",
+    "year": 1555,
+    "displayDate": "c. 1550–1555 (with later Mughal additions)",
+    "era": "Early Modern",
+    "eraTheme": "emerald-gold",
+    "period": "Mughal Empire",
+    "civilization": "Mughal Empire (India / Central Asia)",
+    "dynasty": "Mughal Dynasty (Commissioned by Humayun, additions by Jahangir & Shah Jahan)",
+    "artist": "Attributed to Abd al-Samad & Mir Sayyid Ali (with later court masters)",
+    "medium": "Opaque watercolor (gouache) and gold on fine cotton cloth",
+    "technique": "Persianate brush miniature technique on large-scale textile",
+    "origin": "Kabul / Delhi, Mughal Empire",
+    "currentLocation": "The British Museum, London",
+    "accession": "1913,0208,0.1 (British Museum)",
+    "dimensions": "108.5 × 107.5 cm (42.7 × 42.3 in)",
+    "image": "/images/artifacts/princes-timur.jpg",
+    "modelType": "deep-zoom",
+    "audioNarration": "Painted on fine cotton with gold leaf around 1550, Princes of the House of Timur is the earliest and most ambitious large-scale Mughal painting in existence. Commissioned by Emperor Humayun, it gathers four generations of Timurid rulers in an imperial garden pavilion to proclaim dynastic legitimacy and cultural grandeur.",
+    "overview": "The Princes of the House of Timur is an extraordinary monumental Mughal painting created on cotton around 1550–1555 during Emperor Humayun's reign. Spanning over a square meter, it depicts an idealized royal garden banquet where Humayun sits surrounded by his Central Asian Timurid ancestors and subsequent Mughal descendants.",
+    "historicalContext": "Following his return from exile in Safavid Persia in 1555, Emperor Humayun brought master Persian court artists—including Mir Sayyid Ali and Abd al-Samad—to establish the imperial Mughal kitabkhana (painting studio). Over the next century, successive emperors Jahangir and Shah Jahan commissioned court painters to insert their own updated portraits into the composition, transforming the painting into a living dynastic genealogical document.",
+    "artisticSignificance": "This work marks the historic synthesis where high Persian miniature aesthetics (delicate high-horizon landscapes, intricate floral carpets, and architectural tiles) fused with South Asian naturalism, portraiture, and expansive scale. The application of pure ground gold, lapis lazuli, and cinnabar pigment on cotton remains exceptionally vivid.",
+    "culturalMeaning": "The painting functioned as visual propaganda of sovereign descent, linking the Indian Mughal dynasty directly back to Amir Timur (Tamerlane) and Genghis Khan, thereby asserting incontestable divine and ancestral legitimacy over the Indian subcontinent.",
+    "influenceOnLaterArt": "The imperial atelier established for this project directly birthed the magnificent Mughal miniature school that produced the Hamzanama, Akbarnama, and Padshahnama, fundamentally reshaping North Indian painting for the next three hundred years.",
+    "visualCharacteristics": [
+      "Monumental scale on cotton cloth, unprecedented for early Islamic court miniatures.",
+      "Central octagonal garden pavilion with Emperor Humayun seated beneath a golden canopy.",
+      "Multi-generational royal portraits spanning Timur, Babur, Humayun, Akbar, Jahangir, and Shah Jahan.",
+      "Lush Persianate landscape with blossoming plum trees, rocky crags, and swirling clouds.",
+      "Lavish banquet service showing golden ewers, fruit bowls, attendants, and court musicians."
+    ],
+    "hotspots": [
+      {
+        "id": "humayun",
+        "title": "Emperor Humayun in Central Pavilion",
+        "x": 52,
+        "y": 46,
+        "detail": "Humayun, second Mughal emperor, sits centrally in the pavilion hosting his imperial lineage, dressed in rich Persian silk with a plumed turban."
+      },
+      {
+        "id": "akbar",
+        "title": "Young Prince Akbar",
+        "x": 42,
+        "y": 42,
+        "detail": "Humayun's son and greatest successor, Akbar, is depicted as a young youth, whose portrait was retouched and honored as he built the empire."
+      },
+      {
+        "id": "timurid-ancestors",
+        "title": "Timurid Ancestors & Babur",
+        "x": 32,
+        "y": 55,
+        "detail": "Seated on the carpet are Babur (founder of the Mughal Empire) and his illustrious Central Asian Timurid forebears, celebrating lineage."
+      },
+      {
+        "id": "landscape",
+        "title": "Persianate Golden Sky & Blossoming Trees",
+        "x": 50,
+        "y": 15,
+        "detail": "The high horizon line, swirling gold-leaf clouds, and delicate blossoms reflect direct stylistic influence from Safavid Persian court painting."
+      },
+      {
+        "id": "attendants",
+        "title": "Court Attendants & Banqueting Vessels",
+        "x": 68,
+        "y": 72,
+        "detail": "Servants carrying golden flagons and roasted meats showcase royal court protocol, cuisine, and opulent metalware."
+      }
+    ],
+    "interactiveModule": {
+      "type": "mughal-family-tree",
+      "title": "Mughal Dynastic Lineage & Figure Spotter",
+      "figures": [
+        {
+          "name": "Amir Timur (Tamerlane)",
+          "role": "Great Ancestor & Central Asian Conqueror (1336–1405)",
+          "relation": "The root patriarch from whom all Mughal emperors claimed divine lineage"
+        },
+        {
+          "name": "Babur",
+          "role": "Founder of Mughal Dynasty in India (r. 1526–1530)",
+          "relation": "Great-great-great grandson of Timur; victor at Battle of Panipat"
+        },
+        {
+          "name": "Humayun",
+          "role": "2nd Mughal Emperor & Patron of the Painting (r. 1530–1556)",
+          "relation": "Brought Persian court masters to India, founding the Mughal atelier"
+        },
+        {
+          "name": "Akbar the Great",
+          "role": "3rd Mughal Emperor (r. 1556–1605)",
+          "relation": "Synthesized Indian, Persian, and European artistic traditions into imperial style"
+        },
+        {
+          "name": "Jahangir & Shah Jahan",
+          "role": "4th & 5th Mughal Emperors (Added in later decades)",
+          "relation": "Had their own portraits inserted into this master canvas to confirm continuity"
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "The British Museum, London",
+      "url": "https://www.britishmuseum.org/collection/object/A_1913-0208-0-1",
+      "license": "British Museum Open Data / CC BY-NC-SA 4.0",
+      "credit": "Trustees of the British Museum / London"
+    },
+    "coordinates": {
+      "lat": 28.6139,
+      "lng": 77.2090,
+      "locationName": "Delhi / Agra (Mughal Court)"
+    },
+    "comparisonMetrics": {
+      "scale": "Monumental Textile Painting (108.5 cm)",
+      "subjectType": "Dynastic Court Lineage & Imperial Banquet",
+      "patronage": "Imperial Mughal Court (Humayun/Akbar/Jahangir)",
+      "aestheticFocus": "Persianate High Horizon, Gold Detailing & Realistic Portraiture"
+    }
+  },
+  {
+    "id": "raja-pratap-singh",
+    "title": "Portrait of Raja Pratap Singh of Jaipur",
+    "year": 1780,
+    "displayDate": "1780 CE",
+    "era": "Early Modern",
+    "eraTheme": "crimson-ochre",
+    "period": "Rajput / Rajasthan School (Jaipur)",
+    "civilization": "Rajput Princely States",
+    "dynasty": "Kachwaha Rajput Dynasty of Jaipur",
+    "artist": "Master Artist of the Jaipur Court Atelier",
+    "medium": "Opaque watercolor (gouache) and gold on paper",
+    "technique": "Miniature painting with bold outlines and flat burnished pigments",
+    "origin": "Jaipur, Rajasthan, India",
+    "currentLocation": "The British Museum, London",
+    "accession": "1920,0917,0.238 (British Museum)",
+    "dimensions": "29.2 × 21.5 cm (11.5 × 8.5 in)",
+    "image": "/images/artifacts/raja-pratap-singh.jpg",
+    "modelType": "deep-zoom",
+    "audioNarration": "Created in 1780 at the court of Jaipur, this regal portrait of Sawai Pratap Singh exemplifies the brilliant decorative vitality of Rajput court art. Wearing an immaculate white jama, jeweled turban, and holding a sacred lotus, the ruler is celebrated as both a valiant warrior and a passionate devotee of Krishna.",
+    "overview": "This 1780 gouache portrait depicts Maharaja Sawai Pratap Singh of Jaipur (r. 1778–1803), the visionary builder of the famous Hawa Mahal (Palace of Winds). It stands as a brilliant archetype of 18th-century Rajput portraiture, characterized by its strict side-profile perspective, luminous white muslin dress, jewel-encrusted regalia, and emotional devotional undertone.",
+    "historicalContext": "As central Mughal political authority waned in the 18th century, indigenous Rajput kingdoms in Rajasthan (including Jaipur, Mewar, Marwar, Kishangarh, Bundi, and Kota) flourished into magnificent centers of independent artistic patronages. Pratap Singh was an accomplished poet and ardent devotee of Lord Krishna who composed devotional verses under the pen-name 'Brajnidhi'.",
+    "artisticSignificance": "In stark contrast to Mughal naturalism, Rajput painting favored rhythmic, expressive outlines, flat saturated color planes, and stylized facial features—notably the sweeping lotus-shaped eye (kaman-chashm). The contrast between the crisp white jama robe and the warm monochrome background focuses all visual attention on the majesty and spiritual grace of the prince.",
+    "culturalMeaning": "The portrait balances the dual ideals of Rajput kingship: the ruler as a chivalric Kshatriya warrior (signified by his gem-hilted tulwar sword and katar dagger) and as a pious Vaishnava devotee (holding a pink lotus flower symbolizing purity and devotion to Krishna).",
+    "influenceOnLaterArt": "The vibrant color harmonies and bold, stylized figuration of the Rajasthan schools directly influenced 20th-century Indian modernist pioneers, such as Jamini Roy and the Bengal School, who looked to folk and regional court painting to forge a post-colonial visual identity.",
+    "visualCharacteristics": [
+      "Formal side-profile (ekchashm) pose traditional to Indian princely portraiture.",
+      "Immaculate pleated white muslin jama robe tied neatly at the chest.",
+      "Lavish turban (pagri) adorned with emerald and ruby sarpech aigrettes.",
+      "Right hand delicately cradling a fragrant pink lotus bud.",
+      "Left hand resting with regal calm on the hilt of a curved Rajput sword."
+    ],
+    "hotspots": [
+      {
+        "id": "profile",
+        "title": "Strict Profile & Lotus Eye",
+        "x": 50,
+        "y": 25,
+        "detail": "The head is turned in exact profile, featuring the elongated almond eye and regal mustache that defined the idealized Jaipur court facial canon."
+      },
+      {
+        "id": "turban",
+        "title": "Jeweled Turban (Sarpech)",
+        "x": 50,
+        "y": 14,
+        "detail": "A gold-threaded pagri crowned with a jeweled sarpech feather plume, indicating sovereign royal status in the Kachwaha dynasty."
+      },
+      {
+        "id": "lotus-flower",
+        "title": "Pink Lotus in Hand",
+        "x": 55,
+        "y": 50,
+        "detail": "Holding a sacred lotus bud expresses the king's deep Vaishnavite piety and his identity as a poet-devotee of Krishna."
+      },
+      {
+        "id": "jama",
+        "title": "Fine Muslin Jama & Pearl Necklaces",
+        "x": 50,
+        "y": 42,
+        "detail": "Multiple strands of Basra pearls and emerald beads hang over a translucent white cotton jama, showcasing Rajput courtly elegance."
+      },
+      {
+        "id": "sword",
+        "title": "Bejeweled Talwar Sword",
+        "x": 35,
+        "y": 78,
+        "detail": "The curved steel talwar with gold-inlaid hilt serves as an emblem of warrior heritage, sovereignty, and state defense."
+      }
+    ],
+    "interactiveModule": {
+      "type": "rajput-vs-mughal",
+      "title": "Mughal vs Rajput Court Painting: Stylistic Contrast",
+      "matrix": [
+        {
+          "feature": "Patronage & Context",
+          "mughal": "Imperial central court; cosmopolitan record of history and royal memoirs",
+          "rajput": "Regional princely kingdoms; celebration of local chivalry, poetry, and Hindu bhakti"
+        },
+        {
+          "feature": "Aesthetic Style",
+          "mughal": "Naturalistic modelling, soft shading, spatial depth, Persian & European perspective",
+          "rajput": "Bold graphic outlines, flat saturated color fields, lyrical rhythm, stylized anatomy"
+        },
+        {
+          "feature": "Subject Matter",
+          "mughal": "Dynastic history, court protocol, hunting, botanical studies, international diplomacy",
+          "rajput": "Ragamala musical modes, Krishna-Lila mythology, heroic portraiture, seasonal festivals"
+        },
+        {
+          "feature": "Color Philosophy",
+          "mughal": "Subtle mineral tones, delicate gradations, lapis, gold-wash backgrounds",
+          "rajput": "Emotional, symbolic use of blazing crimson, yellow ochre, turquoise, and deep emerald"
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "The British Museum, London",
+      "url": "https://www.britishmuseum.org/collection/object/A_1920-0917-0-238",
+      "license": "British Museum Open Data / CC BY-NC-SA 4.0",
+      "credit": "Trustees of the British Museum / London"
+    },
+    "coordinates": {
+      "lat": 26.9124,
+      "lng": 75.7873,
+      "locationName": "Jaipur, Rajasthan"
+    },
+    "comparisonMetrics": {
+      "scale": "Intimate Folio (29.2 cm)",
+      "subjectType": "Princely Portraiture / Warrior-Devotee",
+      "patronage": "Rajput Royal Court of Jaipur",
+      "aestheticFocus": "Flat Vibrant Gouache, Calligraphic Line & Vaishnava Symbolism"
+    }
+  },
+  {
+    "id": "vasantsena",
+    "title": "Vasantsena",
+    "year": 1896,
+    "displayDate": "1896 CE",
+    "era": "Colonial / Late 19th c.",
+    "eraTheme": "deep-blue-gold",
+    "period": "Late 19th-Century Indian Art & Print Culture",
+    "civilization": "Colonial India / Industrial Age",
+    "dynasty": "Princely Travancore / Ravi Varma Fine Arts Lithographic Press",
+    "artist": "Raja Ravi Varma",
+    "medium": "Chromolithograph / Oleograph on paper",
+    "technique": "Multi-stone color lithographic printing with oil-like textured inks",
+    "origin": "Lonavala / Malavli Press, Maharashtra (originating from Travancore)",
+    "currentLocation": "National Gallery of Modern Art (NGMA), New Delhi",
+    "accession": "15606 (NGMA New Delhi)",
+    "dimensions": "71.0 × 50.8 cm (28.0 × 20.0 in)",
+    "image": "/images/artifacts/vasantsena.jpg",
+    "modelType": "deep-zoom",
+    "audioNarration": "Created in 1896 by Raja Ravi Varma, Vasantsena represents the revolutionary moment when Indian classical mythology met European academic realism and modern printing technology. Through his pioneering oleograph press, Ravi Varma democratized sacred and literary art, placing museum-quality visual culture into millions of everyday Indian homes.",
+    "overview": "Vasantsena is an iconic 1896 oleographic print by the royal artist Raja Ravi Varma (1848–1906), illustrating the noble heroine of King Sudraka's celebrated classical Sanskrit play 'Mrcchakatika' (The Little Clay Cart). It perfectly embodies the historic fusion of European oil painting realism with indigenous Indian literary and mythological narratives.",
+    "historicalContext": "During the late 19th century under British colonial rule, Indian artists confronted European academic art taught in colonial art schools. Raja Ravi Varma, born into the aristocracy of Travancore (Kerala), mastered oil-on-canvas techniques and single-point perspective. In 1894, with the backing of the Dewan of Baroda, he established the 'Ravi Varma Fine Arts Lithographic Press' near Bombay, utilizing state-of-the-art steam-powered German printing machinery to mass-produce his paintings.",
+    "artisticSignificance": "The artwork showcases Ravi Varma's mastery of chiaroscuro (light and shadow), three-dimensional drapery folds, and realistic skin tones, while retaining Indian physical types, traditional gold-bordered zari sarees, and literary emotional pathos (rasa). The rich texture of the oleograph simulated the tactile depth of an oil painting at a fraction of the cost.",
+    "culturalMeaning": "By reproducing divine and mythological figures in inexpensive color prints, Ravi Varma fundamentally transformed Indian sacred space. For the first time, ordinary households across all castes and regions could own vivid visual representations of Lakshmi, Saraswati, and heroines like Vasantsena, creating a shared pan-Indian visual vocabulary.",
+    "influenceOnLaterArt": "Ravi Varma's aesthetic laid the foundational imagery for early Indian cinema (pioneered by Dadasaheb Phalke, who worked at Ravi Varma's press), popular calendar art, theatrical stage design, and modern graphic storytelling (Amar Chitra Katha).",
+    "visualCharacteristics": [
+      "Realistic academic rendering of the human form with naturalistic lighting and shadow.",
+      "Sumptuous gold-embroidered crimson saree draped with authentic regional fidelity.",
+      "Elaborate traditional jewelry including nose ring (nath), ear ornaments, and bangles.",
+      "Soft romantic chiaroscuro highlighting the heroine's introspective expression.",
+      "Rich oil-simulating surface sheen characteristic of German oleographic print technology."
+    ],
+    "hotspots": [
+      {
+        "id": "expression",
+        "title": "The Sanskrit Heroine (Nayika)",
+        "x": 50,
+        "y": 22,
+        "detail": "Depicts Vasantasena, the cultured and generous courtesan from the Sanskrit drama 'Mrcchakatika', filled with romantic anticipation."
+      },
+      {
+        "id": "jewelry",
+        "title": "Traditional Gold & Pearl Adornments",
+        "x": 56,
+        "y": 28,
+        "detail": "Ravi Varma meticulously painted authentic Indian jewelry, combining traditional South Indian gold craftsmanship with realistic specular highlights."
+      },
+      {
+        "id": "saree",
+        "title": "Zari Saree & Three-Dimensional Drapery",
+        "x": 48,
+        "y": 52,
+        "detail": "The rich fabric folds demonstrate European academic mastery of drapery while celebrating indigenous handloom textiles and zari brocade."
+      },
+      {
+        "id": "oleograph-texture",
+        "title": "Oleographic Print Surface",
+        "x": 35,
+        "y": 75,
+        "detail": "Printed using up to 16 separate limestone color plates, producing a multi-layered oil-like texture accessible to the broad public."
+      },
+      {
+        "id": "press-signature",
+        "title": "Ravi Varma Press Inscription",
+        "x": 50,
+        "y": 92,
+        "detail": "The bottom margin contains the signature and imprint of the Ravi Varma Lithographic Press, symbolizing the birth of mass print culture in India."
+      }
+    ],
+    "interactiveModule": {
+      "type": "ravi-varma-press",
+      "title": "The Oleograph Revolution: Art $\\to$ Printing $\\to$ Mass Culture",
+      "phases": [
+        {
+          "stage": "Original Oil on Canvas",
+          "desc": "Ravi Varma paints a large oil masterpiece using European academic techniques and Indian models."
+        },
+        {
+          "stage": "German Lithographic Stones",
+          "desc": "Master lithographers transfer the artwork onto 12 to 16 separate Bavarian limestone slabs—one for each color pigment."
+        },
+        {
+          "stage": "Steam Press Printing (Malavli)",
+          "desc": "German steam-driven presses register each color layer sequentially onto high-grade paper, building vibrant depth."
+        },
+        {
+          "stage": "Varnishing & Texture (Oleograph)",
+          "desc": "An oil varnish is applied and textured to emulate the tactile impasto of an authentic oil painting."
+        },
+        {
+          "stage": "Mass Circulation in Indian Homes",
+          "desc": "Priced at just a few rupees, millions of prints enter domestic altars, living rooms, and markets across India."
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "National Gallery of Modern Art (NGMA), New Delhi",
+      "url": "https://www.ngmaindia.gov.in/virtual-tour-of-raja-ravi-varma.asp",
+      "license": "Public Domain / NGMA Virtual Collection",
+      "credit": "National Gallery of Modern Art, New Delhi"
+    },
+    "coordinates": {
+      "lat": 18.7500,
+      "lng": 73.4833,
+      "locationName": "Malavli / Travancore"
+    },
+    "comparisonMetrics": {
+      "scale": "Mass-produced Print (71 cm)",
+      "subjectType": "Classical Literary Heroine (Sanskrit Drama)",
+      "patronage": "Mass Public Market & Princely Baroda/Travancore",
+      "aestheticFocus": "European Academic Realism fused with Indian Mythological Pathos"
+    }
+  },
+  {
+    "id": "group-three-girls",
+    "title": "Group of Three Girls",
+    "year": 1935,
+    "displayDate": "1935 CE",
+    "era": "Modern",
+    "eraTheme": "terracotta-neutral",
+    "period": "Modern Indian Art (Post-Impressionism / Avant-Garde)",
+    "civilization": "Modern 20th-Century India",
+    "dynasty": "Modern Era (Pre-Independence Avant-Garde)",
+    "artist": "Amrita Sher-Gil",
+    "medium": "Oil on canvas",
+    "technique": "Monumental modernist figurative oil painting with bold flat color blocks",
+    "origin": "Amritsar, Punjab, India",
+    "currentLocation": "National Gallery of Modern Art (NGMA), New Delhi",
+    "accession": "NGMA-00982 (National Gallery of Modern Art)",
+    "dimensions": "73.5 × 99.5 cm (28.9 × 39.2 in)",
+    "image": "/images/artifacts/group-three-girls.jpg",
+    "modelType": "deep-zoom",
+    "audioNarration": "Painted in 1935 shortly after her return to India from Paris, Group of Three Girls by Amrita Sher-Gil is widely recognized as the watershed masterpiece of Indian Modernism. Awarded the Gold Medal by the Bombay Art Society, it captures the quiet dignity, poignant melancholy, and profound humanity of Indian women through radical post-impressionist color and form.",
+    "overview": "Group of Three Girls is a foundational masterpiece of modern Indian art, painted in 1935 by Amrita Sher-Gil (1913–1941) at her family estate in Amritsar. The painting captures three young Indian women seated together in quiet introspection, marked by bold earth-red tones, simplified contours, and haunting emotional resonance.",
+    "historicalContext": "Born in Budapest to a Sikh aristocrat-scholar and a Hungarian opera singer, Sher-Gil trained at the École des Beaux-Arts in Paris, absorbing European modernist currents like Paul Gauguin and Cézanne. In late 1934, feeling an irresistible artistic calling, she returned to India declaring: 'Europe belongs to Picasso, Matisse, and Braque... but India belongs only to me.' Group of Three Girls was the very first major canvas she produced upon her return, winning the prestigious Bombay Art Society Gold Medal in 1937.",
+    "artisticSignificance": "Sher-Gil dramatically broke away from both British academic naturalism and the decorative nostalgia of the Bengal School. Influenced by the wall murals of Ajanta and Basohli miniatures, she simplified human anatomy into flat, sculptural planes. Her palette is dominated by intense, unmodulated fields of crimson red, earthy ochre, amber yellow, and deep brown skin tones, turning humble subjects into monumental icons of dignity.",
+    "culturalMeaning": "Rather than presenting an exoticized or decorative view of Indian womanhood, Sher-Gil captures the silent, uncomplaining endurance, melancholy, and inner solitude of young women awaiting an uncertain marital future in traditional Indian society.",
+    "influenceOnLaterArt": "Amrita Sher-Gil is universally acknowledged as the 'mother of modern Indian painting.' Her revolutionary synthesis of international modernism and authentic Indian soul directly inspired the Bombay Progressive Artists' Group (MF Husain, FN Souza, SH Raza) and established modern figurative art in post-colonial India.",
+    "visualCharacteristics": [
+      "Three seated women arranged in a monumental triangular compositional frieze.",
+      "Radical use of saturated, unmixed cadmium red, warm ochre, and earthy olive hues.",
+      "Simplified, flattened anatomical contours with expressive elongation of hands.",
+      "Introspective, downcast expressions radiating profound psychological depth.",
+      "Elimination of decorative background clutter to focus entirely on human presence."
+    ],
+    "hotspots": [
+      {
+        "id": "central-girl",
+        "title": "Central Figure in Brilliant Crimson",
+        "x": 50,
+        "y": 42,
+        "detail": "The central girl is draped in a blazing red dupatta, an iconic Sher-Gil trademark that charges the composition with visual heat and emotional intensity."
+      },
+      {
+        "id": "hands",
+        "title": "Expressive Elongated Hands",
+        "x": 50,
+        "y": 72,
+        "detail": "The slender, stylized hands resting on the laps reflect the direct influence of ancient Ajanta cave frescoes on Sher-Gil's draftsmanship."
+      },
+      {
+        "id": "faces",
+        "title": "Melancholic Introspection",
+        "x": 38,
+        "y": 28,
+        "detail": "Large, dark, meditative eyes turned away from the viewer capture the silent dignity and social realities of 1930s Indian women."
+      },
+      {
+        "id": "color-harmonies",
+        "title": "Gauguin-Inspired Modernist Color Blocks",
+        "x": 72,
+        "y": 48,
+        "detail": "Contrasting earthy olive-green and saffron-ochre fabrics create bold visual tension without relying on conventional academic shading."
+      },
+      {
+        "id": "monumentality",
+        "title": "Simplified Modernist Form",
+        "x": 50,
+        "y": 88,
+        "detail": "Stripped of decorative ornamentation or domestic backgrounds, the figures attain the monumental gravity of classical sculpture in modern oil."
+      }
+    ],
+    "interactiveModule": {
+      "type": "shergil-modernism",
+      "title": "Modernist Color Palette & Compositional Analysis",
+      "aspects": [
+        {
+          "aspect": "Color Dominance",
+          "value": "Brilliant Crimson (#B22222), Raw Sienna (#C68B59), Deep Ochre (#D4A373), Forest Olive (#4A5D4E)",
+          "desc": "Bold, flat, saturated pigments celebrating Indian sunlight and earth."
+        },
+        {
+          "aspect": "Influences",
+          "value": "Paul Gauguin + Ajanta Cave Murals + Basohli Miniatures",
+          "desc": "Synthesizing European post-impressionist form with classical Indian aesthetic soul."
+        },
+        {
+          "aspect": "Psychological Depth",
+          "value": "Quiet Dignity & Somber Melancholy",
+          "desc": "Replacing colonial exoticism with authentic empathy for Indian life."
+        },
+        {
+          "aspect": "Composition",
+          "value": "Triangular Figural Pyramid",
+          "desc": "Stable monumental staging that anchors the three women as eternal archetypes."
+        }
+      ]
+    },
+    "museumSource": {
+      "name": "National Gallery of Modern Art (NGMA), New Delhi",
+      "url": "https://museumsofindia.gov.in/repository/record/ngma_del-ngma-00982-416",
+      "license": "Public Domain / National Art Treasure of India",
+      "credit": "National Gallery of Modern Art, New Delhi / Ministry of Culture"
+    },
+    "coordinates": {
+      "lat": 31.6340,
+      "lng": 74.8723,
+      "locationName": "Amritsar, Punjab"
+    },
+    "comparisonMetrics": {
+      "scale": "Easel Canvas (73.5 × 99.5 cm)",
+      "subjectType": "Modernist Humanist Portraiture (Three Women)",
+      "patronage": "Independent Avant-Garde Artist",
+      "aestheticFocus": "Post-Impressionist Color Blocks, Ajanta Line & Psychological Introspection"
+    }
+  }
+]
