@@ -20,7 +20,7 @@ export const ExhibitionShell: React.FC = () => {
 
   const lenisRef = useRef<Lenis | null>(null);
 
-  // Initialize Lenis Smooth Scroll with silky-smooth inertia tuning
+  // Initialize Lenis Smooth Scroll & Instant Auto-Start Audio
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -37,18 +37,29 @@ export const ExhibitionShell: React.FC = () => {
     }
     requestAnimationFrame(raf);
 
-    // Auto-start subtle background ambient Indian music drone on user interaction
-    const handleFirstInteraction = () => {
+    // 1. Attempt immediate audio start on component mount
+    droneSynth.start();
+
+    // 2. Global capture listeners for instant browser autoplay unlock on FIRST permitted user interaction
+    const unlockAutoplayAudio = () => {
       droneSynth.start();
-      window.removeEventListener('click', handleFirstInteraction);
-      window.removeEventListener('scroll', handleFirstInteraction);
+      window.removeEventListener('click', unlockAutoplayAudio);
+      window.removeEventListener('scroll', unlockAutoplayAudio);
+      window.removeEventListener('mousemove', unlockAutoplayAudio);
+      window.removeEventListener('pointerdown', unlockAutoplayAudio);
+      window.removeEventListener('touchstart', unlockAutoplayAudio);
+      window.removeEventListener('keydown', unlockAutoplayAudio);
     };
-    window.addEventListener('click', handleFirstInteraction, { once: true });
-    window.addEventListener('scroll', handleFirstInteraction, { once: true });
+
+    window.addEventListener('click', unlockAutoplayAudio, { once: true });
+    window.addEventListener('scroll', unlockAutoplayAudio, { once: true });
+    window.addEventListener('mousemove', unlockAutoplayAudio, { once: true });
+    window.addEventListener('pointerdown', unlockAutoplayAudio, { once: true });
+    window.addEventListener('touchstart', unlockAutoplayAudio, { once: true });
+    window.addEventListener('keydown', unlockAutoplayAudio, { once: true });
 
     return () => {
       lenis.destroy();
-      droneSynth.stop();
     };
   }, []);
 
@@ -74,12 +85,12 @@ export const ExhibitionShell: React.FC = () => {
     }
   };
 
-  // Only show left/right timeline tracker when inside the artifact scenes section
+  // Only show right timeline tracker when inside the artifact scenes section
   const isTrackerVisible = globalProgress > 0.03 && globalProgress < 0.95;
 
   return (
     <div className="relative min-h-screen bg-[#07080c] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-amber-500/30 selection:text-amber-200">
-      {/* 1. Right Chronological Timeline Rail (White Dots Matching User Image) */}
+      {/* 1. Right Chronological Timeline Rail */}
       <TimelineTracker
         activeIdx={activeIdx}
         globalProgress={globalProgress}

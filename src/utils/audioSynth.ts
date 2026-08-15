@@ -1,89 +1,132 @@
-// Web Audio API Tanpura / Ambient Drone Synthesizer
+// Singleton Museum Ambient Audio Engine (/leberch-indian-440089.mp3)
+// Automatic Start on Load & Global Capture Auto-Unlock
 
-class IndianDroneSynth {
-  private ctx: AudioContext | null = null;
-  private oscillators: OscillatorNode[] = [];
-  private gainNode: GainNode | null = null;
+class MuseumAudioTrack {
+  private static instance: MuseumAudioTrack;
+  private audio: HTMLAudioElement | null = null;
   private isPlaying: boolean = false;
+  private isStoppedBySessionUser: boolean = false;
+  private defaultVolume: number = 0.35;
+  private duckedVolume: number = 0.08;
+  private isDucked: boolean = false;
+
+  private constructor() {
+    if (typeof window !== 'undefined') {
+      this.init();
+      this.bindAutoUnlockListeners();
+    }
+  }
+
+  public static getInstance(): MuseumAudioTrack {
+    if (!MuseumAudioTrack.instance) {
+      MuseumAudioTrack.instance = new MuseumAudioTrack();
+    }
+    return MuseumAudioTrack.instance;
+  }
 
   private init() {
-    if (!this.ctx) {
-      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      this.ctx = new AudioContextClass();
+    if (!this.audio && typeof window !== 'undefined') {
+      this.audio = new Audio('/leberch-indian-440089.mp3');
+      this.audio.loop = true;
+      this.audio.preload = 'auto';
+      this.audio.volume = this.defaultVolume;
     }
   }
 
-  public start() {
+  public async start(): Promise<boolean> {
     this.init();
-    if (!this.ctx || this.isPlaying) return;
+    if (!this.audio) return false;
+    if (this.isStoppedBySessionUser) return false;
+    if (this.isPlaying && !this.audio.paused) return true;
 
-    if (this.ctx.state === 'suspended') {
-      this.ctx.resume();
-    }
-
-    this.gainNode = this.ctx.createGain();
-    this.gainNode.gain.setValueAtTime(0.01, this.ctx.currentTime);
-    this.gainNode.gain.exponentialRampToValueAtTime(0.12, this.ctx.currentTime + 3);
-    this.gainNode.connect(this.ctx.destination);
-
-    // Fundamental frequencies for Sa (C# / 138.59 Hz) and Pa (G# / 207.65 Hz)
-    const baseFreq = 138.59;
-    const frequencies = [
-      baseFreq, // Sa
-      baseFreq * 1.002, // Subtle chorusing
-      baseFreq * 1.5, // Pa (Fifth)
-      baseFreq * 2.0, // Upper Sa (Octave)
-      baseFreq * 0.5 // Deep Sub Sa
-    ];
-
-    this.oscillators = frequencies.map((freq, i) => {
-      const osc = this.ctx!.createOscillator();
-      osc.type = i === 2 ? 'triangle' : 'sine';
-      osc.frequency.setValueAtTime(freq, this.ctx!.currentTime);
-
-      const oscGain = this.ctx!.createGain();
-      oscGain.gain.setValueAtTime(i === 4 ? 0.3 : 0.18, this.ctx!.currentTime);
-
-      osc.connect(oscGain);
-      oscGain.connect(this.gainNode!);
-      osc.start();
-      return osc;
-    });
-
-    this.isPlaying = true;
-  }
-
-  public stop() {
-    if (!this.ctx || !this.isPlaying || !this.gainNode) return;
-
-    this.gainNode.gain.setValueAtTime(this.gainNode.gain.value, this.ctx.currentTime);
-    this.gainNode.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 1.5);
-
-    setTimeout(() => {
-      this.oscillators.forEach(osc => {
-        try {
-          osc.stop();
-          osc.disconnect();
-        } catch (e) {}
-      });
-      this.oscillators = [];
+    try {
+      this.audio.volume = this.isDucked ? this.duckedVolume : this.defaultVolume;
+      const promise = this.audio.play();
+      if (promise !== undefined) {
+        await promise;
+        this.isPlaying = true;
+        return true;
+      }
+      return false;
+    } catch (err) {
+      // Browser autoplay policy might delay un-gestured play until first movement
       this.isPlaying = false;
-    }, 1600);
+      return false;
+    }
   }
 
-  public toggle(): boolean {
+  public stopManual() {
+    this.isStoppedBySessionUser = true;
+    if (this.audio) {
+      this.audio.pause();
+    }
+    this.isPlaying = false;
+  }
+
+  public async startManual(): Promise<boolean> {
+    this.isStoppedBySessionUser = false;
+    return await this.start();
+  }
+
+  public async toggle(): Promise<boolean> {
     if (this.isPlaying) {
-      this.stop();
+      this.stopManual();
       return false;
     } else {
-      this.start();
-      return true;
+      return await this.startManual();
+    }
+  }
+
+  public duck() {
+    this.isDucked = true;
+    if (this.audio) {
+      this.audio.volume = this.duckedVolume;
+    }
+  }
+
+  public unduck() {
+    this.isDucked = false;
+    if (this.audio) {
+      this.audio.volume = this.defaultVolume;
     }
   }
 
   public getIsPlaying(): boolean {
     return this.isPlaying;
   }
+
+  // Bind capture listeners to immediately trigger audio play on the very first pixel move, scroll, or tap after reload
+  private bindAutoUnlockListeners() {
+    if (typeof window === 'undefined') return;
+
+    const unlock = () => {
+      this.start().then((started) => {
+        if (started) {
+          window.removeEventListener('mousemove', unlock);
+          window.removeEventListener('mouseenter', unlock);
+          window.removeEventListener('scroll', unlock);
+          window.removeEventListener('wheel', unlock);
+          window.removeEventListener('pointerdown', unlock);
+          window.removeEventListener('touchstart', unlock);
+          window.removeEventListener('keydown', unlock);
+          window.removeEventListener('click', unlock);
+        }
+      });
+    };
+
+    // Attempt direct play immediately
+    this.start();
+
+    // Listen to all interaction events
+    window.addEventListener('mousemove', unlock, { capture: true, passive: true });
+    window.addEventListener('mouseenter', unlock, { capture: true, passive: true });
+    window.addEventListener('scroll', unlock, { capture: true, passive: true });
+    window.addEventListener('wheel', unlock, { capture: true, passive: true });
+    window.addEventListener('pointerdown', unlock, { capture: true, passive: true });
+    window.addEventListener('touchstart', unlock, { capture: true, passive: true });
+    window.addEventListener('keydown', unlock, { capture: true, passive: true });
+    window.addEventListener('click', unlock, { capture: true, passive: true });
+  }
 }
 
-export const droneSynth = new IndianDroneSynth();
+export const droneSynth = MuseumAudioTrack.getInstance();

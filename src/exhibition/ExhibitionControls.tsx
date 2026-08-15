@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Compass, ArrowRightLeft, Award, ChevronDown } from 'lucide-react';
+import { Sparkles, Compass, ArrowRightLeft, Award, ChevronDown, Music } from 'lucide-react';
+import { droneSynth } from '@/utils/audioSynth';
 
 interface ExhibitionControlsProps {
   onOpenMap: () => void;
@@ -14,7 +15,18 @@ export const ExhibitionControls: React.FC<ExhibitionControlsProps> = ({
   onOpenQuiz,
 }) => {
   const [isExploreOpen, setIsExploreOpen] = useState<boolean>(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState<boolean>(true);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Poll music playing state periodically to keep UI button synced without re-triggering playback
+  useEffect(() => {
+    const checkAudioState = () => {
+      setIsMusicPlaying(droneSynth.getIsPlaying());
+    };
+    checkAudioState();
+    const interval = setInterval(checkAudioState, 400);
+    return () => clearInterval(interval);
+  }, []);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -27,15 +39,42 @@ export const ExhibitionControls: React.FC<ExhibitionControlsProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const handleToggleMusic = async () => {
+    const newState = await droneSynth.toggle();
+    setIsMusicPlaying(newState);
+  };
+
   return (
-    <div ref={dropdownRef} className="fixed top-4 right-4 z-40 flex items-center gap-2 select-none">
-      {/* Minimal Contextual 'EXPLORE' Button */}
+    <div ref={dropdownRef} className="fixed top-4 right-4 z-40 flex items-center gap-2.5 select-none">
+      {/* Dedicated Ambient Museum Music Toggle Button */}
+      <button
+        onClick={handleToggleMusic}
+        aria-label={isMusicPlaying ? 'Turn ambient museum music off' : 'Turn ambient museum music on'}
+        className={`px-3.5 py-2 rounded-2xl text-xs font-mono font-bold flex items-center gap-2 border shadow-2xl transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 ${
+          isMusicPlaying
+            ? 'bg-amber-500 text-slate-950 border-amber-400 shadow-amber-500/40 font-bold'
+            : 'bg-slate-950/90 text-amber-300 border-amber-500/30 backdrop-blur-xl hover:bg-slate-900 hover:border-amber-400'
+        }`}
+        title="Ambient Indian Museum Audio (/leberch-indian-440089.mp3)"
+      >
+        <Music className={`w-3.5 h-3.5 ${isMusicPlaying ? 'animate-pulse text-slate-950' : 'text-amber-400'}`} />
+        <span className="hidden sm:inline">{isMusicPlaying ? 'Museum Music: ON' : 'Museum Music: OFF'}</span>
+        {isMusicPlaying && (
+          <span className="flex items-center gap-0.5 ml-0.5">
+            <span className="w-1 h-3 bg-slate-950 animate-bounce rounded-full" style={{ animationDelay: '0ms' }} />
+            <span className="w-1 h-2 bg-slate-950 animate-bounce rounded-full" style={{ animationDelay: '150ms' }} />
+            <span className="w-1 h-3.5 bg-slate-950 animate-bounce rounded-full" style={{ animationDelay: '300ms' }} />
+          </span>
+        )}
+      </button>
+
+      {/* Contextual 'EXPLORE' Button */}
       <div className="relative">
         <button
           onClick={() => setIsExploreOpen(!isExploreOpen)}
           aria-label="Open exhibition explore menu"
           aria-expanded={isExploreOpen}
-          className={`px-4 py-2.5 rounded-2xl text-xs font-mono font-bold flex items-center gap-2 border shadow-2xl transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 ${
+          className={`px-4 py-2 rounded-2xl text-xs font-mono font-bold flex items-center gap-2 border shadow-2xl transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 ${
             isExploreOpen
               ? 'bg-amber-500 text-slate-950 border-amber-400 shadow-amber-500/40 font-bold scale-105'
               : 'bg-slate-950/90 text-amber-300 border-amber-500/30 backdrop-blur-xl hover:bg-slate-900 hover:border-amber-400'

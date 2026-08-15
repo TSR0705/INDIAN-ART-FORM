@@ -7,6 +7,7 @@ import { HOTSPOTS } from '@/data/hotspots';
 import SceneAtmosphere from './SceneAtmosphere';
 import MuseumArtworkCanvas from './MuseumArtworkCanvas';
 import { Volume2, VolumeX, ExternalLink } from 'lucide-react';
+import { droneSynth } from '@/utils/audioSynth';
 
 interface ArtifactSceneProps {
   artifact: Artifact;
@@ -25,12 +26,13 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
 
   const [isPlayingAudio, setIsPlayingAudio] = useState<boolean>(false);
 
-  // Auto-stop audio when scrolling away from this section
+  // Auto-stop audio when scrolling away from this section and restore background music volume
   useEffect(() => {
     if (!isActive && isPlayingAudio) {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
+      droneSynth.unduck();
       setIsPlayingAudio(false);
     }
   }, [isActive, isPlayingAudio]);
@@ -41,26 +43,61 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
+      droneSynth.unduck();
     };
   }, []);
 
   const handleToggleSpeech = () => {
-    if (!('speechSynthesis' in window)) return;
-
-    if (isPlayingAudio) {
-      window.speechSynthesis.cancel();
-      setIsPlayingAudio(false);
-    } else {
-      window.speechSynthesis.cancel();
-      const textToRead = `${artifact.title}. Created in ${artifact.displayDate}, during the ${artifact.period}. ${artifact.audioNarration || artifact.overview}`;
-      const utterance = new SpeechSynthesisUtterance(textToRead);
-      utterance.rate = 0.92;
-      utterance.pitch = 1.0;
-      utterance.onend = () => setIsPlayingAudio(false);
-      utterance.onerror = () => setIsPlayingAudio(false);
-      window.speechSynthesis.speak(utterance);
-      setIsPlayingAudio(true);
+    if (!('speechSynthesis' in window)) {
+      alert("Speech synthesis is not supported in this browser.");
+      return;
     }
+
+    const synth = window.speechSynthesis;
+
+    if (isPlayingAudio || synth.speaking) {
+      synth.cancel();
+      droneSynth.unduck();
+      setIsPlayingAudio(false);
+      return;
+    }
+
+    synth.cancel(); // Clear any queued speech
+
+    const textToRead = `${artifact.title}. ${artifact.period}. ${artifact.overview} ${artifact.culturalMeaning}`;
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+
+    utterance.rate = 0.92;
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
+
+    // Pick an English voice if available
+    const voices = synth.getVoices();
+    const preferredVoice = voices.find(v => v.lang.startsWith('en-IN') || v.lang.startsWith('en'));
+    if (preferredVoice) {
+      utterance.voice = preferredVoice;
+    }
+
+    utterance.onstart = () => {
+      droneSynth.duck(); // Duck background music while story plays
+      setIsPlayingAudio(true);
+    };
+
+    utterance.onend = () => {
+      droneSynth.unduck(); // Restore background music volume
+      setIsPlayingAudio(false);
+    };
+
+    utterance.onerror = (e) => {
+      console.warn("Speech synthesis error:", e);
+      droneSynth.unduck();
+      setIsPlayingAudio(false);
+    };
+
+    // Speak
+    synth.speak(utterance);
+    droneSynth.duck();
+    setIsPlayingAudio(true);
   };
 
   return (
@@ -107,9 +144,9 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
                   <button
                     onClick={handleToggleSpeech}
                     aria-label={`Play curator narration audio for ${artifact.title}`}
-                    className={`px-3 py-1 rounded-full text-xs font-mono font-bold flex items-center gap-2 border transition-all cursor-pointer shadow-md focus-visible:ring-2 focus-visible:ring-amber-400 ${
+                    className={`px-3 py-1.5 rounded-full text-xs font-mono font-bold flex items-center gap-2 border transition-all cursor-pointer shadow-md focus-visible:ring-2 focus-visible:ring-amber-400 ${
                       isPlayingAudio
-                        ? 'bg-amber-500 text-slate-950 border-amber-400 shadow-amber-500/30 animate-pulse'
+                        ? 'bg-amber-500 text-slate-950 border-amber-400 shadow-amber-500/30 font-bold'
                         : 'bg-slate-900/90 text-amber-300 border-slate-700 hover:border-amber-400 hover:bg-slate-800'
                     }`}
                     title={`Listen narration for ${artifact.title}`}

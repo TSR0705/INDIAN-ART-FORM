@@ -1,14 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { droneSynth } from '@/utils/audioSynth';
 
 interface OpeningSceneProps {
   onStartScroll?: () => void;
 }
 
 export const OpeningScene: React.FC<OpeningSceneProps> = ({ onStartScroll }) => {
+  const handleStageClick = () => {
+    droneSynth.start();
+    if (onStartScroll) onStartScroll();
+  };
+
   return (
-    <section className="relative w-full h-screen bg-[#07080c] text-slate-100 flex flex-col items-center justify-between p-8 overflow-hidden select-none">
+    <section
+      onClick={handleStageClick}
+      className="relative w-full h-screen bg-[#07080c] text-slate-100 flex flex-col items-center justify-between p-8 overflow-hidden select-none cursor-pointer"
+    >
       {/* Background Ambient Radial Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
