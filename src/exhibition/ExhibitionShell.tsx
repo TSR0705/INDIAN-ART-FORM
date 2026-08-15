@@ -20,13 +20,13 @@ export const ExhibitionShell: React.FC = () => {
 
   const lenisRef = useRef<Lenis | null>(null);
 
-  // Initialize Lenis Smooth Scroll
+  // Initialize Lenis Smooth Scroll with silky-smooth inertia tuning
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      wheelMultiplier: 1,
-      touchMultiplier: 1.5,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.2,
     });
 
     lenisRef.current = lenis;
@@ -74,12 +74,12 @@ export const ExhibitionShell: React.FC = () => {
     }
   };
 
-  // Only show left timeline tracker when inside the artifact scenes section
+  // Only show left/right timeline tracker when inside the artifact scenes section
   const isTrackerVisible = globalProgress > 0.03 && globalProgress < 0.95;
 
   return (
     <div className="relative min-h-screen bg-[#07080c] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-amber-500/30 selection:text-amber-200">
-      {/* 1. Left Chronological Timeline Rail (Only visible inside artifact scenes) */}
+      {/* 1. Right Chronological Timeline Rail (White Dots Matching User Image) */}
       <TimelineTracker
         activeIdx={activeIdx}
         globalProgress={globalProgress}

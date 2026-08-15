@@ -13,7 +13,6 @@ interface MuseumArtworkCanvasProps {
 }
 
 export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
-  artifactId,
   title,
   imageSrc,
   hotspots = [],
@@ -25,14 +24,15 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
   const [magnifierPos, setMagnifierPos] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
   const [activeHotspot, setActiveHotspot] = useState<Hotspot | null>(null);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  const [imageError, setImageError] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current || !isMagnifierActive) return;
     const rect = containerRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    const x = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+    const y = Math.max(0, Math.min(100, ((e.clientY - rect.top) / rect.height) * 100));
     setMagnifierPos({ x, y });
   };
 
@@ -43,19 +43,20 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
   };
 
   return (
-    <div className="relative w-full flex flex-col items-center my-2">
+    <div className="relative w-full flex flex-col items-center select-none">
       {/* Direct Large Artwork Display Stage */}
       <div
         ref={containerRef}
         onMouseMove={handleMouseMove}
-        className="relative w-full min-h-[480px] sm:min-h-[580px] flex items-center justify-center rounded-3xl overflow-hidden group select-none cursor-crosshair"
+        className="relative w-full flex items-center justify-center rounded-3xl overflow-hidden group cursor-crosshair"
       >
-        {/* Floating Controls Overlay (Neatly Positioned Inside Top Right) */}
+        {/* Floating Controls Overlay */}
         <div className="absolute top-3 right-3 z-30 flex items-center gap-1 bg-slate-950/90 backdrop-blur-xl p-1.5 rounded-2xl border border-slate-700/80 shadow-2xl opacity-90 group-hover:opacity-100 transition-opacity">
           {enableZoomLens && (
             <button
               onClick={() => setIsMagnifierActive(!isMagnifierActive)}
-              className={`px-2.5 py-1.5 rounded-xl text-[11px] font-semibold flex items-center gap-1 transition-all cursor-pointer ${
+              aria-label="Toggle 3x magnifier lens"
+              className={`px-2.5 py-1.5 rounded-xl text-[11px] font-semibold flex items-center gap-1 transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 ${
                 isMagnifierActive
                   ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
                   : 'text-slate-300 hover:text-white hover:bg-slate-800'
@@ -71,21 +72,24 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
 
           <button
             onClick={() => handleZoom('in')}
-            className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors"
+            aria-label="Zoom artwork in"
+            className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-amber-400"
             title="Zoom In"
           >
             <ZoomIn className="w-3.5 h-3.5" />
           </button>
           <button
             onClick={() => handleZoom('out')}
-            className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors"
+            aria-label="Zoom artwork out"
+            className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-amber-400"
             title="Zoom Out"
           >
             <ZoomOut className="w-3.5 h-3.5" />
           </button>
           <button
             onClick={() => handleZoom('reset')}
-            className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors"
+            aria-label="Reset zoom level"
+            className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-amber-400"
             title="Reset Zoom"
           >
             <RotateCcw className="w-3.5 h-3.5" />
@@ -93,7 +97,8 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
           {enableFullscreen && (
             <button
               onClick={() => setIsFullscreen(true)}
-              className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors"
+              aria-label="Open artwork full screen"
+              className="p-1.5 text-slate-300 hover:text-white hover:bg-slate-800 rounded-xl cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-amber-400"
               title="Full Screen View"
             >
               <Maximize2 className="w-3.5 h-3.5" />
@@ -107,11 +112,19 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
           transition={{ duration: 0.3, ease: 'easeOut' }}
           className="relative w-full h-full flex items-center justify-center p-2"
         >
-          <img
-            src={imageSrc}
-            alt={title}
-            className="max-h-[520px] sm:max-h-[580px] w-auto object-contain rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
-          />
+          {!imageError ? (
+            <img
+              src={imageSrc}
+              alt={title}
+              onError={() => setImageError(true)}
+              className="max-h-[460px] sm:max-h-[540px] w-auto object-contain rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] transition-all"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-64 bg-slate-900/90 rounded-2xl border border-slate-800 flex items-center justify-center text-slate-400 font-mono text-xs">
+              [ High-Resolution Museum Record Image ]
+            </div>
+          )}
 
           {/* Hotspot Pins Overlaid Directly on Artwork */}
           {hotspots.map((hs) => (
@@ -119,7 +132,8 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
               key={hs.id}
               onClick={() => setActiveHotspot(activeHotspot?.id === hs.id ? null : hs)}
               style={{ top: `${hs.y}%`, left: `${hs.x}%` }}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 group z-30 focus:outline-none cursor-pointer"
+              aria-label={`Hotspot detail: ${hs.title}`}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 group z-30 focus:outline-none cursor-pointer focus-visible:ring-2 focus-visible:ring-amber-400 rounded-full"
               title={hs.title}
             >
               <span className="relative flex h-7 w-7">
@@ -133,7 +147,7 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
         </motion.div>
 
         {/* 3x Optical Lens Circle */}
-        {isMagnifierActive && (
+        {isMagnifierActive && !imageError && (
           <div
             className="absolute pointer-events-none rounded-full border-2 border-amber-400 shadow-2xl overflow-hidden z-30"
             style={{
@@ -152,7 +166,7 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
         )}
       </div>
 
-      {/* Active Hotspot Annotation Callout Card (Positioned Cleanly Below Image Canvas) */}
+      {/* Active Hotspot Annotation Callout Card */}
       <AnimatePresence>
         {activeHotspot && (
           <motion.div
@@ -171,7 +185,8 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
             </div>
             <button
               onClick={() => setActiveHotspot(null)}
-              className="text-slate-400 hover:text-white text-xs p-1.5 rounded-lg hover:bg-slate-800"
+              aria-label="Close hotspot detail"
+              className="text-slate-400 hover:text-white text-xs p-1.5 rounded-lg hover:bg-slate-800 cursor-pointer"
             >
               ✕
             </button>
@@ -184,6 +199,7 @@ export const MuseumArtworkCanvas: React.FC<MuseumArtworkCanvasProps> = ({
         <div className="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-2xl flex items-center justify-center p-4">
           <button
             onClick={() => setIsFullscreen(false)}
+            aria-label="Close full screen view"
             className="absolute top-6 right-6 p-3 rounded-full bg-slate-900 border border-slate-700 text-slate-300 hover:text-white z-50 cursor-pointer"
           >
             <X className="w-6 h-6" />

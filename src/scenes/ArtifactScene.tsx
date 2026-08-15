@@ -64,18 +64,18 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
   };
 
   return (
-    <div id={`scene-${artifact.id}`} className="w-full min-h-screen py-24 border-b border-amber-500/10 flex items-center justify-center">
+    <section id={`scene-${artifact.id}`} aria-label={`Exhibition scene: ${artifact.title}`} className="w-full py-8 sm:py-12 flex items-center justify-center">
       <SceneAtmosphere config={config}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Alternating Zig-Zag Grid Layout with Staggered Scroll Motion */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Alternating Zig-Zag Grid Layout with Staggered Motion */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* LARGE DIRECT ARTWORK IMAGE (Order alternates) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.93, y: 40 }}
+              initial={{ opacity: 0, scale: 0.95, y: 30 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
-              viewport={{ once: false, margin: "-10% 0px -10% 0px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: false, margin: "-5% 0px -5% 0px" }}
               className={`lg:col-span-6 ${isImageLeft ? 'lg:order-1' : 'lg:order-2'}`}
             >
               <MuseumArtworkCanvas
@@ -90,14 +90,14 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
 
             {/* EDITORIAL NARRATIVE & TYPOGRAPHY WITH STAGGERED MOTION */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              viewport={{ once: false, margin: "-10% 0px -10% 0px" }}
-              className={`lg:col-span-6 space-y-6 ${isImageLeft ? 'lg:order-2' : 'lg:order-1'}`}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: false, margin: "-5% 0px -5% 0px" }}
+              className={`lg:col-span-6 space-y-5 ${isImageLeft ? 'lg:order-2' : 'lg:order-1'}`}
             >
               {/* Date & Era Badge + Dedicated Section Audio Button */}
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <span className="text-xs font-mono font-bold tracking-widest text-amber-400 uppercase">
                     {artifact.era} • {artifact.displayDate}
@@ -106,7 +106,8 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
                   {/* Section-Specific Narration Audio Player Button */}
                   <button
                     onClick={handleToggleSpeech}
-                    className={`px-3 py-1 rounded-full text-xs font-mono font-bold flex items-center gap-2 border transition-all cursor-pointer shadow-md ${
+                    aria-label={`Play curator narration audio for ${artifact.title}`}
+                    className={`px-3 py-1 rounded-full text-xs font-mono font-bold flex items-center gap-2 border transition-all cursor-pointer shadow-md focus-visible:ring-2 focus-visible:ring-amber-400 ${
                       isPlayingAudio
                         ? 'bg-amber-500 text-slate-950 border-amber-400 shadow-amber-500/30 animate-pulse'
                         : 'bg-slate-900/90 text-amber-300 border-slate-700 hover:border-amber-400 hover:bg-slate-800'
@@ -128,7 +129,7 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
               </div>
 
               {/* Curator Editorial Narrative Story */}
-              <div className="space-y-4 pt-1">
+              <div className="space-y-3 pt-1">
                 <p className="text-base sm:text-lg text-slate-200 font-sans leading-relaxed font-light">
                   {artifact.overview}
                 </p>
@@ -138,7 +139,7 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
               </div>
 
               {/* Refined Unboxed Specs Grid */}
-              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800/80 text-xs font-mono">
+              <div className="grid grid-cols-2 gap-3 pt-3 border-t border-slate-800/80 text-xs font-mono">
                 <div>
                   <span className="text-slate-500 uppercase block text-[10px] tracking-wider mb-0.5">Medium</span>
                   <strong className="text-slate-200 font-semibold">{artifact.medium}</strong>
@@ -159,12 +160,13 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
 
               {/* Official Museum Link */}
               {artifact.museumSource.url && (
-                <div className="pt-2">
+                <div className="pt-1">
                   <a
                     href={artifact.museumSource.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-mono font-semibold hover:underline"
+                    aria-label={`View official museum record for ${artifact.title}`}
+                    className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-mono font-semibold hover:underline focus-visible:ring-2 focus-visible:ring-amber-400 rounded-sm"
                   >
                     <span>Official Record ({artifact.museum.split(',')[0]})</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -176,7 +178,7 @@ export const ArtifactScene: React.FC<ArtifactSceneProps> = ({
           </div>
         </div>
       </SceneAtmosphere>
-    </div>
+    </section>
   );
 };
 
