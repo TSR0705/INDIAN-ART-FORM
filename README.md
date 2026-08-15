@@ -1,16 +1,58 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+  <br />
+  
+  # INDIAN ART THROUGH TIME
+  
+  **4,500 Years of Masterpieces in an Interactive Digital Humanities Exhibition**
 
-Currently, two official plugins are available:
+  <br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+  *Indus Valley Bronze (c. 2500 BCE) → Modern Indian Modernism (1935 CE)*
 
-## React Compiler
+  <br />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  ---
 
-## Expanding the Oxlint configuration
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+<br />
+
+## ✦ The Vision
+
+> An immersive digital humanities exhibition tracing 4,500 years of Indian artistic heritage—from the Indus Valley’s bronze *Dancing Girl* and Ashoka’s *Lion Capital* to the royal bronzes of Tanjavur and modern masterworks by Amrita Sher-Gil. Built with an unboxed editorial canvas, interactive optical magnifier lens, and ambient museum audio.
+
+<br />
+
+## ✦ Craft & Architecture
+
+- **Core & Logic**: React 18, TypeScript, Vite
+- **Motion & Inertia**: Framer Motion, Lenis Smooth Scroll
+- **Design System**: Editorial Serif Typography (*Cinzel* & *Cormorant Garamond*), HSL Warm Palette
+- **Audio & Media**: Web Audio API & Native Museum Ambient Audio Engine
+
+<br />
+
+---
+
+<br />
+
+<div align="center">
+
+  <br />
+
+  ### *Designed & Engineered by*
+  # **Tanmay Singh**
+
+  <br />
+
+  [**GitHub**](https://github.com/TSR0705) &nbsp;&nbsp;✦&nbsp;&nbsp; [**LinkedIn**](https://linkedin.com/in/tanmay-singh) &nbsp;&nbsp;✦&nbsp;&nbsp; [**Repository**](https://github.com/TSR0705/INDIAN-ART-FORM)
+
+  <br />
+  <br />
+
+  *Crafted for Digital Humanities & Creative Web Engineering*
+
+  <br />
+
+</div>
