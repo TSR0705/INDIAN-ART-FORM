@@ -46,7 +46,7 @@
 
   <br />
 
-  [**GitHub**](https://github.com/TSR0705) &nbsp;&nbsp;✦&nbsp;&nbsp; [**LinkedIn**](https://linkedin.com/in/tanmay-singh) &nbsp;&nbsp;✦&nbsp;&nbsp; [**Repository**](https://github.com/TSR0705/INDIAN-ART-FORM)
+  [**GitHub**](https://github.com/TSR0705) &nbsp;&nbsp;✦&nbsp;&nbsp; [**LinkedIn**](https://www.linkedin.com/in/tanmay-singh-rajput/) &nbsp;&nbsp;✦&nbsp;&nbsp; [**Repository**](https://github.com/TSR0705/INDIAN-ART-FORM)
 
   <br />
   <br />
